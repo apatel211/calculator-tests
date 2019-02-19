@@ -1,8 +1,0 @@
-{
-    
-    "local": {
-        "path":"https://www.online-calculator.com/full-screen-calculator/",
-        "browserName":"chromedriver"
-
-    }
-} 

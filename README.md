@@ -1,7 +1,8 @@
 # js-cucumber-selenium
 
 
-``` bash
+``` 
 npm install
+brew cask install chromedriver
 npm test
 ```

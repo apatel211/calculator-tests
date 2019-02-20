@@ -2,9 +2,7 @@ const { Given, When, Then, After } = require('cucumber');
 var sleep = require('sleep');
 var expect = require('chai').expect;
 var MainClass = require ('../../helper.js')
-var {defineSupportCode} = require('cucumber');
 
-var assert = require('assert');
 var canvasInStart, canvasInResult;
 var Main = new MainClass();
 

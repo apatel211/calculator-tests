@@ -4,6 +4,7 @@ var chrome = require('selenium-webdriver/chrome');
 until = seleniumWebdriver.until;
 By = seleniumWebdriver.By;
 
+
 class Main {
 
 	constructor () {
@@ -40,12 +41,6 @@ class Main {
 	      .activeElement()
 	      .sendKeys(key);
 	  }
-
-	  // async switchTo() {
-	  // 	return await this.driver
-	  //     .switchTo()
-	  //     .activeElement();
-	  // }
 
 	  quit() {
 	  	this.driver.quit()

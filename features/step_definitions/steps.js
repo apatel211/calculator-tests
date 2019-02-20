@@ -2,6 +2,7 @@ const { Given, When, Then, After } = require('cucumber');
 var sleep = require('sleep');
 var expect = require('chai').expect;
 var MainClass = require ('../../helper.js')
+var {defineSupportCode} = require('cucumber');
 
 var canvasInStart, canvasInResult;
 var Main = new MainClass();
@@ -24,9 +25,7 @@ When(/^I have entered "([^"]*)" and "([^"]*)" into the calculator, Substraction$
 Then(/^Calculator state has changed after substration$/, function () {
   canvasInResult = Main.getDataURL("canvas");
   
-  // expect(canvasInStart).not.equal(canvasInResult);
-  assert.notEqual(canvasInStart, canvasInResult, "fine")
-
+  expect(canvasInStart).not.equal(canvasInResult);
 
   console.log("Substraction is working fine");   
   
@@ -43,7 +42,7 @@ When(/^I have entered "([^"]*)" and "([^"]*)" into the calculator, Division$/, f
 Then(/^Calculator state has changed after division$/, function () {
   canvasInResult = Main.getDataURL("canvas");
   
-  // expect(canvasInStart).not.equal(canvasInResult);
+  expect(canvasInStart).not.equal(canvasInResult);
   
   console.log("Division is working fine ");
 
